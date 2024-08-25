@@ -7,8 +7,10 @@ function App() {
 
     return (
         <>
-            <NavBar></NavBar>
-            <Outlet></Outlet>
+            <section className='lg:max-w-7xl mx-auto'>
+                <NavBar></NavBar>
+                <Outlet></Outlet>
+            </section>
             <Footer></Footer>
         </>
     )

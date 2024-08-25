@@ -38,8 +38,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><CreateStory></CreateStory></PrivateRoute>
             },
             {
-                path: "",
+                path: "/storyDetails/:id",
                 element: <PrivateRoute><StoryDetails></StoryDetails></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://story-loom-server.vercel.app/stories/${params.id}`)
             },
         ]
     },
